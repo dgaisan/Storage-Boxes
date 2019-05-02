@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A502BF10227A5C8A008415A9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502BF0F227A5C8A008415A9 /* LocationCell.swift */; };
+		A502BF12227A5D7F008415A9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502BF11227A5D7F008415A9 /* Location.swift */; };
+		A502BF14227AD10D008415A9 /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502BF13227AD10D008415A9 /* LocationsController.swift */; };
+		A502BF16227AD441008415A9 /* AddEditLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502BF15227AD441008415A9 /* AddEditLocationController.swift */; };
+		A502BF19227ADDB9008415A9 /* LimitTextLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502BF18227ADDB9008415A9 /* LimitTextLength.swift */; };
 		A5B879CE227803D60078748C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B879CD227803D60078748C /* AppDelegate.swift */; };
 		A5B879D0227803D60078748C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B879CF227803D60078748C /* LoginController.swift */; };
 		A5B879D3227803D60078748C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B879D1227803D60078748C /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A502BF0F227A5C8A008415A9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		A502BF11227A5D7F008415A9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A502BF13227AD10D008415A9 /* LocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsController.swift; sourceTree = "<group>"; };
+		A502BF15227AD441008415A9 /* AddEditLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditLocationController.swift; sourceTree = "<group>"; };
+		A502BF18227ADDB9008415A9 /* LimitTextLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitTextLength.swift; sourceTree = "<group>"; };
 		A5B879CA227803D60078748C /* Storage-Boxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storage-Boxes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B879CD227803D60078748C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B879CF227803D60078748C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -39,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A502BF0E227A5C76008415A9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A502BF0F227A5C8A008415A9 /* LocationCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A502BF17227ADD85008415A9 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A502BF18227ADDB9008415A9 /* LimitTextLength.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
 		A5B879C1227803D60078748C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +84,8 @@
 		A5B879CC227803D60078748C /* Storage-Boxes */ = {
 			isa = PBXGroup;
 			children = (
+				A502BF17227ADD85008415A9 /* delegate */,
+				A502BF0E227A5C76008415A9 /* view */,
 				A5B879E122781BA90078748C /* constant */,
 				A5B879E022780CD00078748C /* model */,
 				A5B879DF227807B70078748C /* controller */,
@@ -74,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				A5B879CF227803D60078748C /* LoginController.swift */,
+				A502BF13227AD10D008415A9 /* LocationsController.swift */,
+				A502BF15227AD441008415A9 /* AddEditLocationController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -81,6 +111,7 @@
 		A5B879E022780CD00078748C /* model */ = {
 			isa = PBXGroup;
 			children = (
+				A502BF11227A5D7F008415A9 /* Location.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -166,8 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B879E322781BE90078748C /* AuthenticationType.swift in Sources */,
+				A502BF14227AD10D008415A9 /* LocationsController.swift in Sources */,
+				A502BF19227ADDB9008415A9 /* LimitTextLength.swift in Sources */,
+				A502BF10227A5C8A008415A9 /* LocationCell.swift in Sources */,
 				A5B879D0227803D60078748C /* LoginController.swift in Sources */,
 				A5B879E522781D2E0078748C /* Labels.swift in Sources */,
+				A502BF12227A5D7F008415A9 /* Location.swift in Sources */,
+				A502BF16227AD441008415A9 /* AddEditLocationController.swift in Sources */,
 				A5B879CE227803D60078748C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
