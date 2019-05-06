@@ -7,27 +7,37 @@ import UIKit
 
 class AddEditLocationController: UIViewController {
     
-    var name: String!
-    var color: UIColor!
+    var locationName: String!
+    var locationColor: UIColor!
     var textLimitDelegate: UITextFieldDelegate!
+    var colorPicker: ColorPickerDropdown!
     
-    @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var colorInput: UIColor!
+    @IBOutlet weak var locationNameView: UITextField!
+    @IBOutlet weak var locationColorView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initControls()
+        self.populateEditValues()
     }
+    
     
     private func initControls () {
         textLimitDelegate = LimitTextLength(limitTo: 15)
-        nameInput.delegate = textLimitDelegate
+        locationNameView.delegate = textLimitDelegate
         
-        if let n = self.name {
-            self.nameInput.text = n
+        colorPicker = ColorPickerDropdown()
+        locationColorView.delegate = colorPicker
+        locationColorView.dataSource = colorPicker
+        
+    }
+    
+    private func populateEditValues () {
+        if let n = self.locationName {
+            self.locationNameView.text = n
         }
-        if let c = self.color {
-            // TODO
+        if let c = self.locationColor {
+            //self.locationColorView.set = c
         }
     }
     
