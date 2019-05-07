@@ -5,7 +5,14 @@
 
 import UIKit
 
-struct Location {
+struct Location: Codable {
+    var id: UUID
     var name: String
-    var color: UIColor
+    //var color: String // String representation of HEX
+    //var createdAt: Date
+        
+    func save () {
+        LocalDataManager.save(self, with: id.uuidString)
+    }
+    
 }

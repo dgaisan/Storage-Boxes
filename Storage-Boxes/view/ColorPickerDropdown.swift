@@ -7,10 +7,7 @@ import UIKit
 
 class ColorPickerDropdown: UIPickerView {
     
-    var supportedColors = [
-        UIColor.black, UIColor.red, UIColor.gray, UIColor.green,
-        UIColor.cyan, UIColor.darkGray, UIColor.yellow
-    ]
+    var supportedColors: [UIColor]!
     
     let customHeight: CGFloat = 30
     let customWidth: CGFloat = 30
