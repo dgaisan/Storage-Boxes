@@ -33,7 +33,6 @@ class AddEditLocationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("+++ AddEditLocationController viewDidLoad")
         self.initControls()
         self.populateEditValues()
     }
