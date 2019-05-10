@@ -15,4 +15,8 @@ struct Location: Codable {
         LocalDataManager.save(self, with: id.uuidString)
     }
     
+    func delete () {
+        LocalDataManager.delete(id.uuidString)
+    }
+    
 }

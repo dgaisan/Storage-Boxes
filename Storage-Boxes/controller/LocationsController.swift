@@ -11,29 +11,24 @@ class LocationsController: UICollectionViewController {
     
     override func viewDidLoad () {
         super.viewDidLoad()
-        
-        print("-----LocationsController->viewDidLoad")
         loadLocations()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadLocations()
+        collectionView.reloadData()
+    }
+    
     func loadLocations () {
-        print("++++++++load locations")
-
         locations.removeAll()
         locations.append(contentsOf: LocalDataManager.loadAll(Location.self))
         print(locations)
         print(locations.count)
         self.collectionView.dataSource = self
-        print("End loading locations ----------")
     }
 
     @IBAction func addNewLocation (_ sender: UIBarButtonItem) {
-        
-//        let addEditLocationController = self.storyboard!.instantiateViewController(withIdentifier: "AddEditLocation") as! AddEditLocationController
-//        addEditLocationController.locationSetter = self
-//        addEditLocationController.locationName = "Hi Bro"
-//        self.show(addEditLocationController, sender: self)
-        
         editLocation(nil)
     }
     
@@ -80,6 +75,4 @@ extension LocationsController: TriggerCellEdit {
     func onCellEdit(_ location: Location) {
         editLocation(location)
     }
-    
-    
 }

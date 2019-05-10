@@ -56,9 +56,8 @@ class AddEditLocationController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func deleteLocation(_ sender: UIButton) {
-        
+        self.location?.delete()
         self.navigationController?.popViewController(animated: true)
-        
     }
     
     @IBAction func discardChanges (_ sender: UIBarButtonItem) {
